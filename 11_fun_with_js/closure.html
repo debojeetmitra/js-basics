@@ -1,3 +1,55 @@
+<!-- 1. Lexical Scoping (Concept of Access)
+Lexical scoping ka matlab hai ki ek inner function ko apne outer (parent) function ke scope ka poora access hota hai
+,
+.
+Access Rule: Inner function outer function ke variables, properties aur functions ko use kar sakta hai, bhale hi uske paas apne koi local variables na hon
+,
+.
+Memory Sharing: Jab functions nest hote hain, toh wo memory share karte hain, jis wajah se inner function ko bahar ki cheezein milti hain
+,
+.
+2. The Family Analogy (Intuition)
+Revision ke liye ye analogy sabse best hai
+,
+:
+Children to Parents: Bache apne parents aur grandparents se kuch bhi maang sakte hain (Inner functions can access outer variables)
+.
+Parents to Children: Parents apne bacho ke "private secrets" ya toys nahi le sakte (Outer functions cannot access inner variables)
+,
+.
+Siblings: Do bhai-behen (ek hi level ke functions) aapas mein apni cheezein share nahi karte
+,
+.
+3. Closures (The Special Case)
+Closure tab banta hai jab aap ek inner function ko return karte ho
+,
+.
+Beyond Execution: Jab outer function apna kaam khatam karke execution context se hat jata hai, tab bhi inner function ke paas uski memory rehti hai
+,
+.
+Full Package: Interview ke liye yaad rakhna ki sirf function return nahi hota, balki uska poora lexical scope (sath wale variables aur unka reference) sath jata hai
+,
+.
+4. Real-World Use Case (Practical Example)
+Lecture mein ek Click Handler ka example diya gaya hai
+:
+Problem: Agar aap 500 buttons ke liye alag-alag color change function likhoge toh code repeat hoga (DRY principle violate hoga)
+,
+.
+Solution: Ek generic clickHandler banaya gaya jo closure ka use karke apne "color" variable ko yaad rakhta hai
+.
+Result: Jab aap function return karte ho, toh wo function us particular color ko "yaad" rakhta hai jo use create karte waqt mila tha, aur click karne par wahi color apply karta hai
+,
+.
+Short Summary for Revision: Lexical scoping "ijazat (access)" deti hai, aur closure us access ko "yaad (memory)" rakhta hai, bhale hi parent function khatam ho chuka ho
+,
+. -->
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
