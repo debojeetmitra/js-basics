@@ -17,7 +17,10 @@
     div.setAttribute("title", "Hello")
     div.style.backgroundColor = "aqua"
     div.style.padding = "20px"
-    div.innerText = "Hello Boys"
-    document.createTextNode("Chai aur code")
+    //div.innerText = "Hello Boys"
+    const addText = document.createTextNode("Code")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
 </script>
 </html>
